@@ -87,8 +87,8 @@ Otteniamo un numero da 0 a 5, che sommato a 5 diventa da 5 a 10.
 */
 
 // Generiamo numeri casuali per punti e falli
-for (let i = 0; i < squadre.length; i++) {
-  const squadra = squadre[i];
+for (let i = 0; i < teams.length; i++) {
+  const squadra = teams[i];
   squadra.punti = generaNumeroCasuale(0, 100);
   squadra.falli = generaNumeroCasuale(0, 50);
 }
