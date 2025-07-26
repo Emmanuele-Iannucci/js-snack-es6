@@ -34,10 +34,14 @@ let LightBike = RoadBike[0];
 
 // Scorriamo tutte le bici per trovare quella con il peso minore
 for (let i = 1; i < RoadBike.length; i++) {
-  const bike = LightBike[i];
+  const bike = RoadBike[i];
 
 // Se troviamo una bici con peso inferiore, la salviamo
   if (bike.peso < LightBike.peso) {
     LightBike = bike;
   }
 }
+
+// Stampiamo in console la bici più leggera
+console.log('La bici più leggera è:');
+console.log(LightBike);
