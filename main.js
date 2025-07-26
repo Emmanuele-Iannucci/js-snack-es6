@@ -28,3 +28,16 @@ const RoadBike = [
     peso: 6.3
   }
 ];
+
+// Inizializziamo la variabile LightBike con il primo elemento dell'array
+let LightBike = RoadBike[0];
+
+// Scorriamo tutte le bici per trovare quella con il peso minore
+for (let i = 1; i < RoadBike.length; i++) {
+  const bike = LightBike[i];
+
+// Se troviamo una bici con peso inferiore, la salviamo
+  if (bike.peso < LightBike.peso) {
+    LightBike = bike;
+  }
+}
