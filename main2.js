@@ -92,3 +92,14 @@ for (let i = 0; i < teams.length; i++) {
   squadra.punti = generaNumeroCasuale(0, 100);
   squadra.falli = generaNumeroCasuale(0, 50);
 }
+
+// Creiamo un nuovo array con solo nome e falli
+const FoulsRanking = [];
+
+for (let i = 0; i < teams.length; i++) {
+  const squadra = teams[i];
+  FoulsRanking.push({
+    nome: squadra.nome,
+    falli: squadra.falli
+  });
+}
