@@ -12,42 +12,42 @@ Stampo tutto in console. */
 // Ogni squadra ha un nome, punti fatti e falli subiti (inizializzati a 0)
 
 const teams = [
-  {
-    id: 1,
-    nome: 'Juventus',
-    punti: 0,
-    falli: 0
-  },
-  {
-    id: 2,
-    nome: 'Inter',
-    punti: 0,
-    falli: 0
-  },
-  {
-    id: 3,
-    nome: 'Milan',
-    punti: 0,
-    falli: 0
-  },
-  {
-    id: 4,
-    nome: 'Roma',
-    punti: 0,
-    falli: 0
-  },
-  {
-    id: 5,
-    nome: 'Napoli',
-    punti: 0,
-    falli: 0
-  }
+    {
+        id: 1,
+        nome: 'Juventus',
+        punti: 0,
+        falli: 0
+    },
+    {
+        id: 2,
+        nome: 'Inter',
+        punti: 0,
+        falli: 0
+    },
+    {
+        id: 3,
+        nome: 'Milan',
+        punti: 0,
+        falli: 0
+    },
+    {
+        id: 4,
+        nome: 'Roma',
+        punti: 0,
+        falli: 0
+    },
+    {
+        id: 5,
+        nome: 'Napoli',
+        punti: 0,
+        falli: 0
+    }
 ];
 
 // Funzione per generare numeri random (funzione utility)
 
 function generaNumeroCasuale(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /*
@@ -87,19 +87,29 @@ Otteniamo un numero da 0 a 5, che sommato a 5 diventa da 5 a 10.
 */
 
 // Generiamo numeri casuali per punti e falli
+
 for (let i = 0; i < teams.length; i++) {
-  const squadra = teams[i];
-  squadra.punti = generaNumeroCasuale(0, 100);
-  squadra.falli = generaNumeroCasuale(0, 50);
+    const squadra = teams[i];
+    squadra.punti = generaNumeroCasuale(0, 100);
+    squadra.falli = generaNumeroCasuale(0, 50);
 }
 
 // Creiamo un nuovo array con solo nome e falli
+
 const FoulsRanking = [];
 
 for (let i = 0; i < teams.length; i++) {
-  const squadra = teams[i];
-  FoulsRanking.push({
-    nome: squadra.nome,
-    falli: squadra.falli
-  });
+    const squadra = teams[i];
+    FoulsRanking.push({
+        nome: squadra.nome,
+        falli: squadra.falli
+    });
 }
+
+// Stampiamo tutto in console
+
+console.log("All teams complete details:");
+console.log(teams);
+
+console.log("Soccer fouls ranking:");
+console.log(FoulsRanking);
