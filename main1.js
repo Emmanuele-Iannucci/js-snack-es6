@@ -33,7 +33,7 @@ const RoadBike = [
 let LightBike = RoadBike[0];
 
 // Scorriamo tutte le bici per trovare quella con il peso minore
-for (let i = 1; i < RoadBike.length; i++) {
+for (let i = 0; i < RoadBike.length; i++) {
   const bike = RoadBike[i];
 
   // Se troviamo una bici con peso inferiore, la salviamo
